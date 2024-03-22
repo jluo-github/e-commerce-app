@@ -1,4 +1,4 @@
-please visit
+please visit [purplecat-ecommerce](https://purplecat-ecommerce.netlify.app/) for more details.
 
 ### npm
 
