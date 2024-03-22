@@ -11,7 +11,7 @@ const getUserLocalStorage = () => {
 };
 
 const getThemeLocalStorage = () => {
-  const theme = localStorage.getItem("theme") || themes.light;
+  const theme = localStorage.getItem("theme") || themes.dracula;
   document.documentElement.setAttribute("data-theme", theme);
   return theme;
 };
