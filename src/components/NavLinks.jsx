@@ -20,7 +20,7 @@ const NavLinks = () => {
         {
           /* doesn't show checkout/ orders if not login */
         }
-        if (url === "checkout" || (url === "orders" && !user)) {
+        if ((url === "checkout" || url === "orders") && !user) {
           return null;
         }
 
