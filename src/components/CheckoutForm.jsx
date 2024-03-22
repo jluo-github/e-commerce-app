@@ -4,6 +4,7 @@ import SubmitBtn from "./SubmitBtn";
 import { customFetch, formatPrice } from "../utils";
 import { toast } from "react-toastify";
 import { clearCart } from "../features/cart/cartSlice";
+import { useSelector } from "react-redux";
 
 export const action =
   (store, queryClient) =>
@@ -30,7 +31,6 @@ export const action =
         { headers: { Authorization: `Bearer ${user.token}` } }
       );
 
-
       // remove queries from the cache
       queryClient.removeQueries(["orders"]);
       store.dispatch(clearCart());
@@ -54,6 +54,27 @@ export const action =
   };
 
 const CheckoutForm = () => {
+  // const cartItems = useSelector((store) => store.cart.cartItems);
+
+  // handle checkout
+  // const handleCheckout = async () => {
+  //   await fetch("http://localhost:4000/checkout", {
+  //     method: "POST",
+  //     headers: {
+  //       "Content-Type": "application/json",
+  //     },
+  //     body: JSON.stringify({ items: cartItems })
+  //       .then((response) => {
+  //         return response.json();
+  //       })
+  //       .then((response) => {
+  //         if (response.url) {
+  //           window.location.assign(response.url);
+  //         }
+  //       }),
+  //   });
+  // };
+
   return (
     <Form method='POST' className='flex flex-col gap-y-4'>
       <h4 className='font-medium text-xl capitalize'>Shipping information</h4>

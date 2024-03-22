@@ -21,8 +21,13 @@ const Navbar = () => {
           {/* logo */}
           <NavLink
             to='/'
-            className='hidden lg:flex btn btn-primary text-3xl items-center'>
-            J
+            // className='hidden lg:flex btn btn-primary text-3xl items-center'>
+            className='hidden lg:flex btn items-center'>
+            <img
+              src='./logo.png'
+              alt='home'
+              className='h-12 w-12 rounded-full'
+            />
           </NavLink>
 
           {/* dropdown */}

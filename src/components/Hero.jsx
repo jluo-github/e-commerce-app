@@ -1,28 +1,34 @@
 import { Link } from "react-router-dom";
 
-import hero1 from "../assets/hero1.webp";
-import hero2 from "../assets/hero2.webp";
-import hero3 from "../assets/hero3.webp";
-import hero4 from "../assets/hero4.webp";
+import hero1 from "../assets/hero1.png";
+import hero2 from "../assets/hero2.png";
+import hero3 from "../assets/hero3.png";
+import hero4 from "../assets/hero4.png";
 
-const carouselImages = [hero1, hero2, hero3, hero4];
+const carouselImages = [hero3, hero2, hero1, hero4];
 
 const Hero = () => {
   return (
     <div className='grid lg:grid-cols-2 gap-24 items-center'>
       <div>
-        <h1 className='max-w-2xl text-4xl font-bold tracking-tight sm:text-6xl'>
-          We're change the way people shop
+        <h1 className='my-8 max-w-2xl text-4xl font-bold tracking-tight sm:text-6xl'>
+          Revolutionizing the Shopping Experience
         </h1>
+
+        <p className='my-12 max-w-2xl'>
+          At our company, we&apos;re revolutionizing the way people shop,
+          offering a seamless and personalized journey that redefines retail.
+        </p>
       </div>
 
       <p className='mt-8 max-w-xl text-lg leading-8'>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum unde hic
-        tempore accusamus vitae assumenda libero quam minima numquam veniam
-        repudiandae quia maxime error laboriosam possimus consequatur saepe,
-        commodi suscipit. Ipsum, cumque tempora dolore reprehenderit, fuga eos
-        error qui corrupti, ducimus inventore maiores aspernatur? Deleniti natus
-        omnis tempore hic fugiat!
+        Welcome to our store where we curate exquisite home furnishings that
+        elevate your living spaces. Discover timeless pieces that seamlessly
+        blend style, comfort, and quality, crafted with meticulous attention to
+        detail. Experience the epitome of luxury firsthand at our showroom. Our
+        knowledgeable design consultants are dedicated to helping you create the
+        home of your dreams. Schedule an appointment today and let us curate a
+        personalized selection that perfectly aligns with your vision.
       </p>
 
       <div className='mt-10'>
@@ -32,8 +38,8 @@ const Hero = () => {
       </div>
 
       {/* carousel imgs */}
-      <div className='hidden h-[28rem] lg:carousel carousel-center p-4 space-x-4 bg-neutral rounded-box'>
-        {carouselImages.map((image, index) => {
+      <div className='hidden h-[28rem] lg:carousel carousel-center p-4 space-x-4 bg-gray-100 rounded-box'>
+        {carouselImages.map((image) => {
           return (
             <div className='carousel-item' key={image}>
               <img
